@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>保存功能测试</title>
+</head>
+<body>
+    <canvas id="testCanvas" width="400" height="300" style="border: 1px solid black;"></canvas>
+    <br>
+    <button onclick="drawTest()">绘制测试内容</button>
+    <button onclick="testSave()">测试保存</button>
+    
+    <script>
+        const canvas = document.getElementById('testCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        function drawTest() {
+            // 绘制测试内容
+            ctx.fillStyle = 'red';
+            ctx.fillRect(50, 50, 100, 100);
+            ctx.strokeStyle = 'blue';
+            ctx.lineWidth = 5;
+            ctx.beginPath();
+            ctx.moveTo(10, 10);
+            ctx.lineTo(390, 290);
+            ctx.stroke();
+            ctx.fillStyle = 'green';
+            ctx.font = '20px Arial';
+            ctx.fillText('测试保存功能', 150, 150);
+        }
+        
+        function testSave() {
+            // 测试直接保存
+            const link = document.createElement('a');
+            link.download = 'test_save.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+            
+            console.log('Canvas data:', canvas.toDataURL().substring(0, 100));
+            console.log('Canvas dimensions:', canvas.width, 'x', canvas.height);
+        }
+    </script>
+</body>
+</html>
