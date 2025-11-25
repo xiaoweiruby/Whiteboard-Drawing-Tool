@@ -151,7 +151,7 @@ MIT License - 可自由使用、修改和分发。
 [点击这里查看视频](https://www.bilibili.com/video/BV1S2UPB7Eq1/?spm_id_from=333.1387.homepage.video_card.click)
 
 ## 🌟 网站链接地址
-[whiteboard-drawing-tool.vercel.app](whiteboard-drawing-tool.vercel.app)
+whiteboard-drawing-tool.vercel.app
 ---
 
 **Made with ❤️ by Comate Team**
